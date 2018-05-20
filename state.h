@@ -11,7 +11,7 @@ class State: public QObject
 {
     Q_OBJECT
 public:
-    State(Ui::PomodoroApp *ui, QTimer *m_timer, int *m_period, QObject *parent){
+    State(Ui::PomodoroApp *ui, QTimer *m_timer, int *m_period){
         this->ui = ui;
         this->m_timer = m_timer;
         this->m_period = m_period;

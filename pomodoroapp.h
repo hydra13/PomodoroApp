@@ -19,25 +19,22 @@ class PomodoroApp : public QWidget
 
 public:
     explicit PomodoroApp(QWidget *parent = 0);
-    void setState(State *newState);
     ~PomodoroApp();
 
-    int period() const;
-    void setPeriod(int period);
-    void decrementPeriod();
-
 private slots:
-    void start25MWork();
-    void start5MRest();
-    void start30MRest();
-    void stopTimer();
-    void pauseTimer();
+    void on_pb25MWork_clicked();
+    void on_pb5MRest_clicked();
+    void on_pb30MRest_clicked();
+    void on_pbExit_clicked();
+    void timeout();
+
+    void on_pbStop_clicked();
 
 private:
     Ui::PomodoroApp *ui;
     QTimer *m_timer;
     int m_period;
-    State *m_state;
+    const QString TEMPATE_TIME_STR = "%1:%2";
 };
 
 #endif // POMODOROAPP_H

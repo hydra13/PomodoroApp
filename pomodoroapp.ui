@@ -122,13 +122,19 @@
      <property name="value">
       <number>0</number>
      </property>
+     <property name="textVisible">
+      <bool>false</bool>
+     </property>
      <property name="format">
       <string/>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pbPause">
+    <widget class="QPushButton" name="pbStop">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="minimumSize">
       <size>
        <width>0</width>
@@ -141,7 +147,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Пауза</string>
+      <string>Стоп</string>
      </property>
     </widget>
    </item>
