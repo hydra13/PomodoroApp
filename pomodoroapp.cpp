@@ -43,10 +43,10 @@ void PomodoroApp::on_pb5MRest_clicked()
     ui->pb25MWork->setEnabled(false);
     ui->pb30MRest->setEnabled(false);
     ui->pbStop->setEnabled(true);
-    m_period = 5;// * 60;
-    ui->pBar->setMaximum(5);// * 60);
-    ui->pBar->setValue(5);// * 60);
-    ui->label->setText(TEMPATE_TIME_STR.arg("00", "05"));
+    m_period = 5 * 60;
+    ui->pBar->setMaximum(5 * 60);
+    ui->pBar->setValue(5 * 60);
+    ui->label->setText(TEMPATE_TIME_STR.arg("05", "00"));
     m_timer->start();
 }
 
