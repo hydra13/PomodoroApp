@@ -30,6 +30,8 @@ private slots:
 
     void on_pbStop_clicked();
 
+    void on_pbSettings_clicked();
+
 private:
     Ui::PomodoroApp *ui;
     QTimer *m_timer;

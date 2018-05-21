@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,7 +30,8 @@ SOURCES += \
     work5minstate.cpp \
     rest30minstate.cpp \
     stopstate.cpp \
-    pausestate.cpp
+    pausestate.cpp \
+    messagewidget.cpp
 
 HEADERS += \
         pomodoroapp.h \
@@ -39,7 +40,10 @@ HEADERS += \
     work5minstate.h \
     rest30minstate.h \
     stopstate.h \
-    pausestate.h
+    pausestate.h \
+    messagewidget.h
 
 FORMS += \
-        pomodoroapp.ui
+        pomodoroapp.ui \
+    settingswidget.ui \
+    messagewidget.ui

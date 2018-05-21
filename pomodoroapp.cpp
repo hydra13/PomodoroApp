@@ -1,3 +1,4 @@
+#include "messagewidget.h"
 #include "pomodoroapp.h"
 #include "ui_pomodoroapp.h"
 
@@ -42,9 +43,10 @@ void PomodoroApp::on_pb5MRest_clicked()
     ui->pb25MWork->setEnabled(false);
     ui->pb30MRest->setEnabled(false);
     ui->pbStop->setEnabled(true);
-    m_period = 5 * 60;
-    ui->pBar->setValue(5 * 60);
-    ui->label->setText(TEMPATE_TIME_STR.arg("5", "00"));
+    m_period = 5;// * 60;
+    ui->pBar->setMaximum(5);// * 60);
+    ui->pBar->setValue(5);// * 60);
+    ui->label->setText(TEMPATE_TIME_STR.arg("00", "05"));
     m_timer->start();
 }
 
@@ -74,7 +76,7 @@ void PomodoroApp::timeout()
     QString sec = ((int)(m_period % 60) >= 10 ? "" : "0") + QString::number((int)(m_period % 60));
     ui->label->setText(TEMPATE_TIME_STR.arg(min, sec));
     if (m_period == 0){
-        QMessageBox::information(this, "PomodoroApp", "Time now!!!");
+//        QMessageBox::information(this, "PomodoroApp", "Time now!!!");
         ui->pb5MRest->setEnabled(true);
         ui->pb25MWork->setEnabled(true);
         ui->pb30MRest->setEnabled(true);
@@ -82,6 +84,9 @@ void PomodoroApp::timeout()
         ui->pBar->setValue(0);
         ui->pbStop->setEnabled(false);
         m_timer->stop();
+        MessageWidget *msg = new MessageWidget(this);
+        msg->exec();
+        msg->deleteLater();
     }
 }
 
@@ -95,4 +100,9 @@ void PomodoroApp::on_pbStop_clicked()
     m_period = 0;
     ui->pBar->setValue(0);
     ui->label->setText("00:00");
+}
+
+void PomodoroApp::on_pbSettings_clicked()
+{
+
 }
