@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/application.ico</file>
+        <file>icons/Sport-bowling.ico</file>
+        <file>icons/Thumb-up.ico</file>
+        <file>icons/alarm.ico</file>
+        <file>icons/logout.ico</file>
+        <file>icons/setting.ico</file>
+        <file>icons/stop-red.ico</file>
+    </qresource>
+    <qresource prefix="/pictures">
+        <file>pictures/application.png</file>
+        <file>pictures/Sport-bowling.png</file>
+        <file>pictures/Thumb-up.png</file>
+        <file>pictures/alarm.png</file>
+        <file>pictures/logout.png</file>
+        <file>pictures/setting.png</file>
+        <file>pictures/stop-red.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>sounds/super_alarm.mp3</file>
+    </qresource>
+</RCC>

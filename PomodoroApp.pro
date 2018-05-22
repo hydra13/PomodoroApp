@@ -47,3 +47,8 @@ FORMS += \
         pomodoroapp.ui \
     settingswidget.ui \
     messagewidget.ui
+
+RESOURCES += \
+    resources.qrc
+
+RC_FILE = icon.rc

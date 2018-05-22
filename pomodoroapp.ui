@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>540</width>
-    <height>212</height>
+    <height>192</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>PomodoroApp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/icons/alarm.ico</normaloff>:/icons/icons/alarm.ico</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -36,7 +40,17 @@
         </font>
        </property>
        <property name="text">
-        <string>25 минут работы</string>
+        <string>Время работы</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/application.png</normaloff>:/pictures/pictures/application.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -60,7 +74,17 @@
         </font>
        </property>
        <property name="text">
-        <string>5 минут отдыха</string>
+        <string>Время перерыва</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/Thumb-up.png</normaloff>:/pictures/pictures/Thumb-up.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -84,7 +108,17 @@
         </font>
        </property>
        <property name="text">
-        <string>30 минут отдыха</string>
+        <string>Время большого перерыва</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/Sport-bowling.png</normaloff>:/pictures/pictures/Sport-bowling.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -100,7 +134,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>10</pointsize>
+       <pointsize>20</pointsize>
       </font>
      </property>
      <property name="text">
@@ -151,6 +185,16 @@
        <property name="text">
         <string>Стоп</string>
        </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/stop-red.png</normaloff>:/pictures/pictures/stop-red.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
       </widget>
      </item>
      <item>
@@ -168,6 +212,16 @@
        </property>
        <property name="text">
         <string>Настройки</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/setting.png</normaloff>:/pictures/pictures/setting.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -187,6 +241,16 @@
        <property name="text">
         <string>Выход</string>
        </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/pictures/pictures/logout.png</normaloff>:/pictures/pictures/logout.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
       </widget>
      </item>
     </layout>
@@ -194,7 +258,9 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>pbExit</sender>
