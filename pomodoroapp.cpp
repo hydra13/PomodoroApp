@@ -1,5 +1,5 @@
-#include "messagewidget.h"
 #include "pomodoroapp.h"
+#include "messagewidget.h"
 #include "ui_pomodoroapp.h"
 
 #include <QMessageBox>

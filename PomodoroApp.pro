@@ -26,26 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         pomodoroapp.cpp \
-    work25minstate.cpp \
-    work5minstate.cpp \
-    rest30minstate.cpp \
-    stopstate.cpp \
-    pausestate.cpp \
     messagewidget.cpp
 
 HEADERS += \
         pomodoroapp.h \
-    state.h \
-    work25minstate.h \
-    work5minstate.h \
-    rest30minstate.h \
-    stopstate.h \
-    pausestate.h \
     messagewidget.h
 
 FORMS += \
         pomodoroapp.ui \
-    settingswidget.ui \
     messagewidget.ui
 
 RESOURCES += \

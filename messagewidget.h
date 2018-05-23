@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_pbStop_clicked();
+    void on_pbStopAndClose_clicked();
 
 private:
     Ui::MessageWidget *ui;

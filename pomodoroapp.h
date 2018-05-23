@@ -3,11 +3,6 @@
 
 #include <QTimer>
 #include <QWidget>
-#include "rest30minstate.h"
-#include "work25minstate.h"
-#include "work5minstate.h"
-#include "pausestate.h"
-#include "stopstate.h"
 
 namespace Ui {
 class PomodoroApp;
@@ -23,7 +18,6 @@ public:
 
     void startTimerSec(quint32 seconds);
     void startTimerMin(quint32 minutes);
-    
     void stopTimer();
 
 private slots:
@@ -31,11 +25,9 @@ private slots:
     void on_pb5MRest_clicked();
     void on_pb30MRest_clicked();
     void on_pbExit_clicked();
-    void timeout();
-
     void on_pbStop_clicked();
-
     void on_pbSettings_clicked();
+    void timeout();
 
 private:
     Ui::PomodoroApp *ui;
