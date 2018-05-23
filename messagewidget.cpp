@@ -7,7 +7,7 @@ MessageWidget::MessageWidget(QWidget *parent) :
     m_player(new QMediaPlayer)
 {
     ui->setupUi(this);
-    m_player->setMedia(QUrl::fromLocalFile(":/sounds/sounds/super_alarm.mp3"));
+    m_player->setMedia(QUrl::fromLocalFile("super_alarm.mp3"));
     m_player->setVolume(50);
     m_player->play();
 }

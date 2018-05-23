@@ -21,6 +21,11 @@ public:
     explicit PomodoroApp(QWidget *parent = 0);
     ~PomodoroApp();
 
+    void startTimerSec(quint32 seconds);
+    void startTimerMin(quint32 minutes);
+    
+    void stopTimer();
+
 private slots:
     void on_pb25MWork_clicked();
     void on_pb5MRest_clicked();
