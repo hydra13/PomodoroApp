@@ -26,18 +26,18 @@ PomodoroApp::~PomodoroApp()
 
 void PomodoroApp::on_pb25MWork_clicked()
 {
-    startTimerMin(25);
+    startTimerSec(settings.getPeriodWork());
 }
 
 
 void PomodoroApp::on_pb5MRest_clicked()
 {
-    startTimerMin(5);
+    startTimerSec(settings.getPeriodShortRest());
 }
 
 void PomodoroApp::on_pb30MRest_clicked()
 {
-    startTimerMin(30);
+    startTimerSec(settings.getPeriodLongRest());
 }
 
 void PomodoroApp::on_pbExit_clicked()
@@ -54,9 +54,7 @@ void PomodoroApp::startTimerSec(quint32 seconds)
     m_period = seconds;
     ui->pBar->setMaximum(seconds);
     ui->pBar->setValue(seconds);
-    QString min = ((int)(m_period / 60) >= 10 ? "" : "0") + QString::number((int)(m_period / 60));
-    QString sec = ((int)(m_period % 60) >= 10 ? "" : "0") + QString::number((int)(m_period % 60));
-    ui->label->setText(TEMPATE_TIME_STR.arg(min, sec));
+    ui->label->setText(convertToTimeStr(m_period));
     m_timer->start();
 }
 
@@ -81,15 +79,20 @@ void PomodoroApp::timeout()
 {
     m_period--;
     ui->pBar->setValue(m_period);
-    QString min = ((int)(m_period / 60) >= 10 ? "" : "0") + QString::number((int)(m_period / 60));
-    QString sec = ((int)(m_period % 60) >= 10 ? "" : "0") + QString::number((int)(m_period % 60));
-    ui->label->setText(TEMPATE_TIME_STR.arg(min, sec));
+    ui->label->setText(convertToTimeStr(m_period));
     if (m_period == 0){
         stopTimer();
         MessageWidget *msg = new MessageWidget(this);
         msg->exec();
         msg->deleteLater();
     }
+}
+
+QString PomodoroApp::convertToTimeStr(int period)
+{
+    QString min = ((int)(period / 60) >= 10 ? "" : "0") + QString::number((int)(period / 60));
+    QString sec = ((int)(period % 60) >= 10 ? "" : "0") + QString::number((int)(period % 60));
+    return TEMPATE_TIME_STR.arg(min, sec);
 }
 
 void PomodoroApp::on_pbStop_clicked()
@@ -99,5 +102,7 @@ void PomodoroApp::on_pbStop_clicked()
 
 void PomodoroApp::on_pbSettings_clicked()
 {
-
+    SettingsWidget *settingsWidget = new SettingsWidget(&settings, this);
+    settingsWidget->exec();
+    settingsWidget->deleteLater();
 }

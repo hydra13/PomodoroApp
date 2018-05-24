@@ -26,15 +26,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         pomodoroapp.cpp \
-    messagewidget.cpp
+    messagewidget.cpp \
+    settingswidget.cpp \
+    settings.cpp
 
 HEADERS += \
         pomodoroapp.h \
-    messagewidget.h
+    messagewidget.h \
+    settingswidget.h \
+    settings.h
 
 FORMS += \
         pomodoroapp.ui \
-    messagewidget.ui
+    messagewidget.ui \
+    settingswidget.ui
 
 RESOURCES += \
     resources.qrc

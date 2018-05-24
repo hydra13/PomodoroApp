@@ -17,7 +17,6 @@ public:
     ~MessageWidget();
 
 private slots:
-    void on_pbStop_clicked();
     void on_pbStopAndClose_clicked();
 
 private:

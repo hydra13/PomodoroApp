@@ -3,6 +3,7 @@
 
 #include <QTimer>
 #include <QWidget>
+#include "settingswidget.h"
 
 namespace Ui {
 class PomodoroApp;
@@ -30,9 +31,11 @@ private slots:
     void timeout();
 
 private:
+    QString convertToTimeStr(int period);
     Ui::PomodoroApp *ui;
     QTimer *m_timer;
     int m_period;
+    Settings settings;
     const QString TEMPATE_TIME_STR = "%1:%2";
 };
 
